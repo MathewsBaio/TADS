@@ -12,17 +12,30 @@ matriz = np.zeros((r+1, c+1))
 novo_matriz = np.zeros((r+1, c+1))
 
 
-matriz[4,1] = 1
-matriz[4,2] = 1
-matriz[6,2] = 1
-matriz[5,3] = 1
-matriz[5,4] = 1
-matriz[4,5] = 1
-matriz[6,5] = 1
-matriz[6,1] = 1
-matriz[5,6] = 1
+#matriz[4,1] = 1
+#matriz[4,2] = 1
+#matriz[6,2] = 1
+#matriz[5,3] = 1
+#matriz[5,4] = 1
+#matriz[4,5] = 1
+#matriz[6,5] = 1
+#matriz[6,1] = 1
+#matriz[5,6] = 1
 
-for ger in range(50):
+#matriz[3,1] = 1
+#matriz[1,2] = 1
+#matriz[3,2] = 1
+#matriz[2,3] = 1
+#matriz[3,3] = 1
+
+
+matriz[15,30] = matriz[15,31] = matriz[15,32] = 1
+matriz[16,30] = matriz[17,30] = matriz[18,30] = matriz[19,30] = 1
+matriz[19,31] = matriz[19,32] = 1
+matriz[16,31] = matriz[17,32] = matriz[18,32] = 1
+
+
+for ger in range(30):
     for i in range(1,r):
         for j in range(1,c):
             vizinho = 0
