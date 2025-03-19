@@ -1,22 +1,17 @@
-#m = [[i * j for j in range(1,4)] for i in range(1,4)]
+#temp: float = float(input("temperatura em graus Fahrenheit? "));
 
-lista = []
-
-for i in range(1,4):
-    linha = []
-    for j in range(1,4):
-        linha.append(i * j)
-    lista.append(linha)
-
-print(lista)
-
-notas = [7,6,8,9,3,7,5,5]
-print(sum(notas[:3]))
+def celsius(f: float):
+    return (5/9) * (f - 32);
 
  
-favorite_languages = {"Sarah": "C#", "Jon": "Java", "Carl": "PHP"}
+#print(f"A temperatura em graus Celsius é {celsius(temp):.2f}");
 
-for name, language in favorite_languages.items():
-    print(f"\n{name}")
 
-numero: int = 123
+def trocaPU(ingredientes: list):
+    aux = ingredientes[-1]
+    ingredientes[-1] = ingredientes[0]
+    ingredientes[0] = aux 
+    return ingredientes
+
+ingredientes: list = ['farinha', 'açúcar', 'manteiga', 'maçãs']
+print(trocaPU(ingredientes))
