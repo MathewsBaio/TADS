@@ -66,10 +66,10 @@ for ger in range(30):
                     novo_matriz[i,j] = 1
                 else:
                     novo_matriz[i,j] = 0
+    
     matriz = novo_matriz
     novo_matriz = np.zeros((r+1, c+1))
-    
-    
+     
     fig.title("GERAÇÃO %d" % ger, fontsize = 20)
     fig.xticks([])
     fig.yticks([])
