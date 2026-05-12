@@ -1,0 +1,54 @@
+import numpy as np
+from matplotlib import pyplot as plt
+import matplotlib.ticker as ticker
+import pandas as pd
+
+
+df = pd.read_csv("employees.csv")
+
+
+#print(df.head())
+
+#print(df.nlargest(1))
+#print(df.nsmallest(1))
+
+
+salaries = df["Salary"]
+
+
+fig, ax = plt.subplots()
+
+fig.set_size_inches(5.6,4.2)
+
+ax.hist(salaries, bins=np.arange(30000, 155000, 10000), edgecolor='black', linewidth = 1.2)
+
+
+formatter = ticker.FormatStrFormatter('$%1.0f')
+
+ax.xaxis.set_major_formatter(formatter)
+
+plt.title("Salários mensais no departamento de vendas")
+plt.xlabel("Salário (bin = 50$)")
+plt.ylabel("Frequeência")
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
